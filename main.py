@@ -1,3 +1,5 @@
+from pygame.mixer_music import play
+
 from constants import SCREEN_HEIGHT, SCREEN_WIDTH
 from logger import log_state
 import pygame
@@ -21,6 +23,7 @@ def main():
                 return
 
         screen.fill("black")
+        player.update(dt)
         player.draw(screen)
         pygame.display.flip()
 
